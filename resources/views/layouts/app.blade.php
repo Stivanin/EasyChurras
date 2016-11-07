@@ -50,6 +50,8 @@
                     <li><a href="{{ url('/home') }}">Home</a></li>
                     @if (!Auth::guest())
                     <li><a href="{{ url('/funcionarios') }}">Funcionários</a></li>
+                    <li><a href="{{ url('/clientes') }}">Clientes</a></li>
+                    <li><a href="{{ url('/estoque') }}">Estoque</a></li>
                     @endif
                 </ul>
 

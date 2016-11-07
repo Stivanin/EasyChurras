@@ -6,27 +6,28 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Preencha o formulário
-                    <a class="pull-right" href="{{url('funcionarios') }}"> Listagem de Funcionários</a>
+                    Informe abaixo as informações do cliente
+                    <a class="pull-right" href="{{url('clientes') }}"> Listagem de Clientes</a>
                 </div>
 
                 <div class="panel-body">
                     
                     @if(Session::has('mensagem_sucesso'))
                         <div class="alert alert-success">{{ Session::get('mensagem_sucesso')}} </div>
+                        
                     @endif
                     
                     @if(Request::is('*/editar'))
-                        {!!Form::model($funcionario, ['method' => 'PATCH', 'url' => 'funcionarios/'.$funcionario->id]) !!}
+                        {!!Form::model($clientes, ['method' => 'PATCH', 'url' => 'clientes/'.$clientes->id]) !!}
                         
                     @else
                     
-                        {!!Form::open(['url' => 'funcionarios/salvar']) !!}
+                        {!!Form::open(['url' => 'clientes/salvar']) !!}
                         
                     @endif
                     
-                    {!!Form::label('contrato', 'Número do Contrato') !!}
-                    {!! Form::input('string', 'contrato', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'Número do Contrato']) !!}
+                    {!!Form::label('socio', 'Número de Sócio') !!}
+                    {!! Form::input('string', 'socio', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'Número de Sócio']) !!}
                     
                     {!!Form::label('nome', 'Nome') !!}
                     {!! Form::input('string', 'nome', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'Nome']) !!}
@@ -43,29 +44,11 @@
                     {!!Form::label('rg', 'Número do RG') !!}
                     {!! Form::input('string', 'rg', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'Número']) !!}
                     
-                    {!!Form::label('ctps', 'Número Carteira de Trabalho') !!}
-                    {!! Form::input('string', 'ctps', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'CTPS']) !!}
-                    
-                    {!!Form::label('cargo', 'Cargo Ocupado') !!}
-                    {!! Form::input('string', 'cargo', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'Cargo']) !!}
-                    
-                    {!!Form::label('salario', 'Salário') !!}
-                    {!! Form::input('string', 'salario', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'Salário']) !!}
-                    
-                    {!!Form::label('vencimento', 'Vencimento do Contrato') !!}
-                    {!! Form::input('string', 'vencimento', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'DD/MM/AAAA']) !!}
-                    
                     {!!Form::label('telefone', 'Telefone') !!}
                     {!! Form::input('string', 'telefone', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'XXXXXXXX']) !!}
                     
                     {!!Form::label('email', 'E-mail') !!}
                     {!! Form::input('string', 'email', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'Email']) !!}
-                    
-                    {!!Form::label('hora', 'Hora de Trabalho') !!}
-                    {!! Form::input('string', 'hora', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'XX:XX']) !!}
-                    
-                    {!!Form::label('beneficios', 'Benefícios') !!}
-                    {!! Form::input('string', 'beneficios', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'Benefícios']) !!}
                     
                     {!!Form::label('complemento', 'Complemento') !!}
                     {!! Form::input('string', 'complemento', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'Complemento']) !!}

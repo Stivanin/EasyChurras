@@ -25,7 +25,7 @@ class FuncionariosController extends Controller
         
         \Session::flash('mensagem_sucesso', 'Funcionário cadastrado com sucesso!');
         
-        return redirect('funcionarios/novo');
+        return redirect('funcionarios');
     }
     public function editar($id) {
         $funcionario = funcionarios::findOrFail($id);
@@ -42,4 +42,21 @@ class FuncionariosController extends Controller
             return redirect('funcionarios/'.$funcionario->id.'/editar');
 
     }
+    
+    public function visualizar($id) {
+        $funcionario = funcionarios::findOrFail($id);
+        
+        return view('funcionarios.visualizar', ['funcionario' => $funcionario]);
+        }
+        
+    public function deletar($id) {
+        $funcionario = funcionarios::findOrFail($id);
+        
+        $funcionario->delete();
+        
+        \Session::flash('mensagem_sucesso', 'Funcionário deletado com sucesso!');
+        
+        return Redirect('funcionarios');
+        }
+ 
 }
