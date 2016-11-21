@@ -45,7 +45,7 @@ public function atualizar($id, Request $request) {
             
             \Session::flash('mensagem_sucesso', 'Produto atualizado com sucesso!');
 
-            return redirect('estoque/'.$estoque->id.'/editar');      
+            return redirect('estoque/'.$estoque->id.'/visualizar');      
     }
 
 public function visualizar($id) {
