@@ -32,6 +32,28 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('estoque/{estoque}/visualizar', 'EstoqueController@visualizar');
     Route::patch('estoque/{estoque}', 'EstoqueController@atualizar');
     Route::delete('estoque/{estoque}', 'EstoqueController@deletar');
+    
+    Route::get('convenios', 'ConveniosController@index');
+    Route::get('convenios/novo', 'ConveniosController@novo');
+    Route::post('convenios/salvar', 'ConveniosController@salvar');
+    Route::get('convenios/{convenio}/editar', 'ConveniosController@editar');
+    Route::get('convenios/{convenio}/visualizar', 'ConveniosController@visualizar');
+    Route::patch('convenios/{convenio}', 'ConveniosController@atualizar');
+    Route::delete('convenios/{convenio}', 'ConveniosController@deletar');
+    
+    Route::get('lojas', 'LojasController@index');
+    Route::get('lojas/novo', 'LojasController@novo');
+    Route::post('lojas/salvar', 'LojasController@salvar');
+    Route::get('lojas/{loja}/editar', 'LojasController@editar');
+    Route::get('lojas/{loja}/visualizar', 'LojasController@visualizar');
+    Route::patch('lojas/{loja}', 'LojasController@atualizar');
+    Route::delete('lojas/{loja}', 'LojasController@deletar');
+    
+    Route::get('relatorios', 'RelatoriosController@index');
+    Route::get('relatorios/compras', 'RelatoriosController@compras');
+    Route::post('relatorios/compras', 'RelatoriosController@gerar');
+    Route::get('relatorios/gerar', 'RelatoriosController@gerar');
+
 
     Route::get('/home', 'HomeController@index');
 });

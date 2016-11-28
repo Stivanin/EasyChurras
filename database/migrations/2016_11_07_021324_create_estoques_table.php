@@ -18,8 +18,8 @@ class CreateEstoquesTable extends Migration
             $table->string('tipo');
             $table->string('quantidade');
             $table->string('nome');
-            $table->string('preco');
-            $table->string('data');
+            $table->double('preco');
+            $table->date('data');
             $table->string('fornecedor');
             $table->string('observacoes');
             

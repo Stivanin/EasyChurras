@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Funcionarios;
+use App\clientes;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 
 class ClientesController extends Controller
@@ -43,7 +42,7 @@ class ClientesController extends Controller
             
             \Session::flash('mensagem_sucesso', 'Cliente atualizado com sucesso!');
 
-            return redirect('clientes/'.$clientes->id.'/editar');
+            return redirect('clientes/'.$clientes->id.'/visualizar');
 
     }
 

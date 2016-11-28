@@ -6,28 +6,28 @@
         <div class="col-md-12 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Produtos em Estoque
-                    <a class="pull-right" href="{{url('estoque/novo') }}"> Cadastrar Produto</a>
+                    Lojas Físicas
+                    <a class="pull-right" href="{{url('lojas/novo') }}"> Cadastrar Loja</a>
                 </div>
                 <div class="panel-body">
                     @if(Session::has('mensagem_sucesso'))
                         <div class="alert alert-success"> {{ Session::get('mensagem_sucesso') }}</div>
                     @endif
-                    Listagem de produtos
+                    Listagem de Lojas
                     
                     <table class="table table-striped">
-                        <th> Contrato </th>
                         <th> Nome </th>
+                        <th> Data de Abertura </th>
                         <th> Ações </th>
                         <tbody>
-                            @foreach($estoque as $estoque)
+                            @foreach($lojas as $lojas)
                             <tr>
-                                <td>{{$estoque->codigo}}</td>
-                                <td>{{$estoque->nome}}</td>
+                                <td>{{$lojas->nome}}</td>
+                                <td>{{$lojas->data}}</td>
                                 <td>
-                                    <a href="estoque/{{$estoque->id}}/visualizar" class="btn btn-default btn-sm"> Visualizar</a>
-                                    <a href="estoque/{{$estoque->id}}/editar" class="btn btn-default btn-sm"> Editar</a>
-                                    {!!Form::open(['method' => 'DELETE', 'url' => '/estoque/'.$estoque->id, 'style' => 'display: inline;'])!!}
+                                    <a href="lojas/{{$lojas->id}}/visualizar" class="btn btn-default btn-sm"> Visualizar</a>
+                                    <a href="lojas/{{$lojas->id}}/editar" class="btn btn-default btn-sm"> Editar</a>
+                                    {!!Form::open(['method' => 'DELETE', 'url' => '/lojas/'.$lojas->id, 'style' => 'display: inline;'])!!}
                                     <button type="submit" class="btn btn-default btn-sm"> Excluir</button>
                                     {!! Form::close() !!}
                                 </td>
