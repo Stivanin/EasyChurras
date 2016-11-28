@@ -36,7 +36,7 @@
                                     
                                 <tr>
                                         <td>Preço do Produto:</td>
-                                        <td>{{$estoque->preco}}</td>
+                                        <td>{{$estoque->valor}}</td>
                                 </tr>
                                 <tr>
                                         <td>Data de Cadastramento:</td>

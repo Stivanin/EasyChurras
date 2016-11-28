@@ -52,6 +52,10 @@
                     <li><a href="{{ url('/funcionarios') }}">Funcionários</a></li>
                     <li><a href="{{ url('/clientes') }}">Clientes</a></li>
                     <li><a href="{{ url('/estoque') }}">Estoque</a></li>
+                    <li><a href="{{ url('/convenios') }}">Convênios</a></li>
+                    <li><a href="{{ url('/lojas') }}">Lojas Físicas</a></li>
+                    <li><a href="{{ url('/agenda') }}">Agenda</a></li>
+                    <li><a href="{{ url('/relatorios') }}">Relatórios</a></li>
                     @endif
                 </ul>
 

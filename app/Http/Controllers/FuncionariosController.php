@@ -39,7 +39,7 @@ class FuncionariosController extends Controller
             
             \Session::flash('mensagem_sucesso', 'Funcionário atualizado com sucesso!');
 
-            return redirect('funcionarios/'.$funcionario->id.'/editar');
+            return redirect('funcionarios/'.$funcionario->id.'/visualizar');
 
     }
     

@@ -34,12 +34,12 @@
                     {!!Form::label('quantidade', 'Quantidade') !!}
                     {!! Form::input('string', 'quantidade', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'XX KG/CX/UN']) !!}
                     
+                    {!!Form::label('preco', 'Preço da Unidade') !!}
+                    {!! Form::input('string', 'preco', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'XXX,XX']) !!}
+                    
                     {!!Form::label('nome', 'Nome') !!}
                     {!! Form::input('string', 'nome', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'Nome do Produto']) !!}
-                    
-                    {!!Form::label('preco', 'Preço do Produto') !!}
-                    {!! Form::input('string', 'preco', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'R$ XXX,XX']) !!}
-                    
+             
                     {!!Form::label('Data', 'Data de Entrada') !!}
                     {!! Form::input('string', 'data', null, ['class' => 'form-control', 'autofocus', 'placeholder' => 'Data de entrada do produto (DD/MM/AAAA)']) !!}
                     

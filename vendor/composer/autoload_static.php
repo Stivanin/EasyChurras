@@ -297,9 +297,12 @@ class ComposerStaticInitc3f020aac43bc27d568917a49ee51368
     );
 
     public static $classMap = array (
+        'CreateAgendasTable' => __DIR__ . '/../..' . '/database/migrations/2016_11_25_144735_create_agendas_table.php',
         'CreateClientesTable' => __DIR__ . '/../..' . '/database/migrations/2016_11_06_224404_create_clientes_table.php',
+        'CreateConveniosTable' => __DIR__ . '/../..' . '/database/migrations/2016_11_18_150947_create_convenios_table.php',
         'CreateEstoquesTable' => __DIR__ . '/../..' . '/database/migrations/2016_11_07_021324_create_estoques_table.php',
         'CreateFuncionariosTable' => __DIR__ . '/../..' . '/database/migrations/2016_06_10_201919_create_funcionarios_table.php',
+        'CreateLojasTable' => __DIR__ . '/../..' . '/database/migrations/2016_11_18_192256_create_lojas_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',

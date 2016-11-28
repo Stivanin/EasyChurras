@@ -13,7 +13,7 @@
                     @if(Session::has('mensagem_sucesso'))
                         <div class="alert alert-success"> {{ Session::get('mensagem_sucesso') }}</div>
                     @endif
-                    Listagem de funcionários
+                    Listagem de produtos
                     
                     <table class="table table-striped">
                         <th> Contrato </th>
